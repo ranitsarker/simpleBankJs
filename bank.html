@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<title>Money Making Page</title>
+</head>
+<body class="bg-gray-100">
+  <div class="flex flex-col items-center min-h-screen py-8">
+    <div class="text-xl font-bold text-blue-500 mb-4">
+      Let's get some money!
+    </div>
+
+    <div class="flex justify-between bg-white rounded-lg shadow p-4 w-full max-w-xl mb-4">
+      <div class="flex flex-col items-center">
+        <h2>Deposit</h2>
+        <p>$<span id="update-deposite">00</span></p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h2>Withdraw</h2>
+        <p>$<span id="update-withdraw">00</span></p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h2>Balance</h2>
+        <p>$<span id="update-balance">120</span></p>
+      </div>
+    </div>
+    <div class="flex justify-between bg-white rounded-lg shadow p-4 w-full max-w-xl">
+      <div class="flex flex-col items-center">
+        <h2>Please Deposit</h2>
+        <div class="flex items-center mt-2">
+          <input id="deposit-field" class="p-2 border rounded w-32" type="text" placeholder="Enter amount">
+          <button id="deposit-btn" class="bg-blue-500 text-white py-2 px-4 rounded ml-2 cursor-pointer" type="button">Deposit</button>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <h2>Please Withdraw</h2>
+        <div class="flex items-center mt-2">
+          <input id="withdraw-field" class="p-2 border rounded w-32" type="text" placeholder="Enter amount">
+          <button id="withdraw-btn" class="bg-blue-500 text-white py-2 px-4 rounded ml-2 cursor-pointer" type="button">Withdraw</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/bank.js"></script>
+  <script src="js/withdraw.js"></script>
+</body>
+</html>
