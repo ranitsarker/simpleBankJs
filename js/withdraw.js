@@ -6,7 +6,7 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const newWithdrawAmountString = withdrawField.value;
     const newWithdrawAmount = parseFloat(newWithdrawAmountString);
     // step 7
-               withdrawField.value = '';
+    withdrawField.value = '';
     if(isNaN(newWithdrawAmount)){
         alert('Please provide a valid number for withdraw');
         return;

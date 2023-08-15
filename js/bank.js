@@ -6,15 +6,12 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     // step 2 (2) collect input field value
     const newDepositAmountString = depositField.value;
     const newDepositAmount = parseFloat(newDepositAmountString);
-
-
     // step 7
     depositField.value = '';
     if(isNaN(newDepositAmount)){
         alert('Please provide a valid number for deposit');
         return;
     }
-
     // console.log(depositAmount);
     // step 3. place and update deposit amount
     const updateDeposit = document.getElementById('update-deposite');
