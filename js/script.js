@@ -7,7 +7,7 @@ document.getElementById('login').addEventListener('click', function(){
     // console.log(mail, password);
 
     if(mail === 'rntprince@gmail.com' && password === '123456'){
-        console.log('valid user');
+        window.location.href = 'bank.html';
     }else{
         console.log('invalid user');
     }
