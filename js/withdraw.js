@@ -7,7 +7,7 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const newWithdrawAmount = parseFloat(newWithdrawAmountString);
     // step 7
     withdrawField.value = '';
-    if(isNaN(newWithdrawAmount)){
+    if(isNaN(newWithdrawAmount) || newWithdrawAmount <= 0){
         alert('Please provide a valid number for withdraw');
         return;
     }
@@ -24,7 +24,7 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const priviousBalanceAfterWithdraw = parseFloat(priviousBalanceStringAfterWithdraw);
     // console.log(priviousBalanceAfterWithdraw);
     if(newWithdrawAmount > priviousBalanceAfterWithdraw){
-        alert('You have no amount');
+        alert('Your account balance is empty!');
         return;
     }
 
@@ -35,13 +35,4 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     // step 6 to get total balance after adding old value with new value 
     const balanceTotalAfterWithdraw = priviousBalanceAfterWithdraw - newWithdrawAmount;
     updateBalanceAfterWithdraw.innerHTML = balanceTotalAfterWithdraw;
-
-
-
-
-
-
-    
-
-
 });

@@ -8,8 +8,8 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const newDepositAmount = parseFloat(newDepositAmountString);
     // step 7
     depositField.value = '';
-    if(isNaN(newDepositAmount)){
-        alert('Please provide a valid number for deposit');
+    if (isNaN(newDepositAmount) || newDepositAmount <= 0) {
+        alert('Please provide a valid positive number for deposit');
         return;
     }
     // console.log(depositAmount);
